@@ -6,6 +6,10 @@
   Player {{ winner }} won the game!!!!
 </h2>
 
+<h2 *ngIf = "draw">
+  Its a draw!!!
+</h2>
+
 <main>
   <app-square *ngFor = "let val of squares; let i = index;" [value] = "val" (click) = "makeMove(i)"></app-square>
 </main>
